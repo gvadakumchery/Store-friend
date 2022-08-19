@@ -1,0 +1,22 @@
+<form action="submit_form" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <label for="Email">Email:</label><br>
+  <input type="text" id="Email" name="Email" value="John@doe"><br>
+  <label for="phone">phone:</label><br>
+  <input type="number" id="phone" name="phone" value="12345"><br><br>
+  <%#===================================== %>
+  <label for="cars">Choose a car:</label>
+  <select name="email" id="cars">
+    <% @user.each do |book| %>
+      <tr>
+        <option value= <%= book.id %>> <%= book.email %></option>
+      </tr>
+    <% end %>
+    
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>

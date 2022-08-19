@@ -1,0 +1,31 @@
+<h1>Hi</h1>
+
+<table>
+  <tr>
+    <th>EMAIL</th>
+  </tr>
+  <% @user.each do |student| %>
+    <tr>
+      <td><%= student.email %></td>
+      <td> <%= button_to "view customers","customer_index/#{student.id}",method: :get%></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+
+
+
+
+<form action="/save_it" method="post">
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit">
+</form><br>
+
+
+<form action="/new_page" method="get">
+  <p>Be a customer </p>
+  <input type="submit">
+</form>

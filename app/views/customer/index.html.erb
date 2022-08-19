@@ -1,0 +1,22 @@
+<h1>Basic</h1>
+<table style="width:100%">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>email</th>
+    <th>phone</th>
+  </tr>
+  <% @user.each do |block| %>
+    <tr>
+      <td><%= block.f_name %></td>
+      <td><%= block.l_name %></td>
+      <td><%= block.email %></td>
+      <td><%= block.phone %></td>
+
+    </tr>
+ 
+  <% end %>
+</table>
+
+
+
